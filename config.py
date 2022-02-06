@@ -22,7 +22,7 @@ class Config(object):
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 class ProductionConfig(Config):
     DEBUG = False
-    SECRET_KEY = "9asdf8980as8df9809sf6a6ds4f3435fa64ˆGggd76HSD57hsˆSDnb"
+    SECRET_KEY = "6db3e8df2213f3c294211274bb4e03d376ffcad6407206bbe938ab216cfb5cdb"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 class DevelopmentConfig(Config):
     ENV = "development"

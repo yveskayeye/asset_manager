@@ -1,6 +1,6 @@
 from crypt import methods
 from flask import Blueprint, render_template
-from ..models import users
+from ..models import user
 from .forms import LoginForm, SignupForm
 
 auth_bp = Blueprint("auth_bp", __name__, template_folder="templates",
