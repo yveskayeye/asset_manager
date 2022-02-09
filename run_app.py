@@ -1,7 +1,8 @@
 from app import create_app
+import config
 import os
 
-config_name = os.environ.get("APP_SETTINGS")
+config_name = config.DevelopmentConfig
 app = create_app(config_name)
 
 
