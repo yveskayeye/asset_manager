@@ -1,43 +1,173 @@
 {% extends "base.html" %}
 
+{% block head %}
+{{super()}}
+{% block styles %}
+<link rel="stylesheet" href="{{url_for('home_bp.static', filename='general/styles.css')}}">
+{% endblock %}
+
+<!--Load the AJAX API-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="{{url_for('home_bp.static', filename='general/charts.js')}}"></script>
+{% endblock %}
+
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="container">
-        <div>
-            <h1>Dashboard</h1>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-
-            </div>
-
-            <div class="col-md-3">
-
-            </div>
-
-            <div class="col-md-3">
-
-            </div>
-
-            <div class="col-md-3">
-
+<div class="">
+    <div class="top-div">
+        <h3>Dashboard</h3>
+    </div>
+    <div class="row card-div">
+        <div class="col-md-3">
+            <div class="card " style="width: 18rem; background-color: rgb(240, 77, 77);">
+                <div class="card-body">
+                    <div style="padding-left: 1rem;">
+                        <h5 class="card-title">1094</h5>
+                        <h6 class="card-subtitle mb-2">total assets</h6>
+                    </div>
+                    <hr>
+                    <div style="text-align: center; background-color: red;"><a href="#" class="card-link">More info</a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div>
-
+        <div class="col-md-3">
+            <div class="card " style="width: 18rem; background-color: rgb(75, 75, 236);">
+                <div class="card-body">
+                    <div style="padding-left: 1rem;">
+                        <h5 class="card-title">1094</h5>
+                        <h6 class="card-subtitle mb-2">total licenses</h6>
+                    </div>
+                    <hr>
+                    <div style="text-align: center; background-color: blue;"><a href="#" class="card-link">More info</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-6">
-
+        <div class="col-md-3">
+            <div class="card " style="width: 18rem; background-color: rgb(224, 224, 65);">
+                <div class="card-body">
+                    <div style="padding-left: 1rem;">
+                        <h5 class="card-title">1094</h5>
+                        <h6 class="card-subtitle mb-2">total accessories</h6>
+                    </div>
+                    <hr>
+                    <div style="text-align: center; background-color: yellow;"><a href="#" class="card-link">More
+                            info</a>
+                    </div>
+                </div>
             </div>
-
-            <div class="col-md-6">
-
-            </div>
-
         </div>
+
+        <div class="col-md-3">
+            <div class="card " style="width: 18rem; background-color: rgb(46, 155, 46);">
+                <div class="card-body">
+                    <div style="padding-left: 1rem;">
+                        <h5 class="card-title">1094</h5>
+                        <h6 class="card-subtitle mb-2">total disposables</h6>
+                    </div>
+                    <hr>
+                    <div style="text-align: center; background-color: green;"><a href="#" class="card-link">More
+                            info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-table">
+        <h2>Recent Activity</h2>
+        <hr>
+        <div class="table-responsive">
+        <table class="table table-striped table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">User</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Target User</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">june nfefwqpefhc wpeo</th>
+                    <td>yves</td>
+                    <td>add</td>
+                    <td>laptop</td>
+                    <td>kayeye</td>
+                </tr>
+                <tr>
+                    <th scope="row">june qfwefweoifchj</th>
+                    <td>yves</td>
+                    <td>add</td>
+                    <td>laptop</td>
+                    <td>kayeye</td>
+                </tr>
+                <tr>
+                    <th scope="row">june efweifgoweifg</th>
+                    <td>yves</td>
+                    <td>add</td>
+                    <td>laptop</td>
+                    <td>kayeye</td>
+                </tr>
+                <tr>
+                    <th scope="row">june wefwqoefyhpwn</th>
+                    <td>yves</td>
+                    <td>add</td>
+                    <td>laptop</td>
+                    <td>kayeye</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 ">
+            <div class="content-table" style="width: 38rem;">
+                <h2>Assets By Percentage</h2>
+                <div id="chart_div">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="content-table" style="width: 38rem;">
+                <h2>Asset Category</h2>
+                <div class="table-responsive">
+                <table class="table table-striped table-bordered table-sm">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mobile phone</td>
+                            <td>Asset</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile phone</td>
+                            <td>Asset</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile phone</td>
+                            <td>Asset</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+
+    </div>
 </div>
 {% endblock %}

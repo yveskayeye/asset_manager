@@ -1,7 +1,50 @@
+body{
+    background-color: #D3DEDC;
+}
 .site-nav{
-    background-color: #92A9BD;
+    background-color: #389ef1;
 }
 
-/* .sidebar{
-    /* display: inline;
-} */ 
+.head-div{
+    padding: 0%;
+}
+
+.head-form{
+    margin-right: 3%;
+}
+.head-form-button{
+    padding-left: 10%;
+}
+a{
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+    
+} 
+
+.side-link i{
+    font-size: 1.5rem; color: #fff;
+}
+
+.side-link a{
+    padding-left: 0.5rem;
+}
+
+/* .side-section{
+    margin-left: 15%;
+} */
+
+.content-section{
+    background-color: #D3DEDC;
+}
+
+aside{
+    background-color:#D3DEDC;
+}
+
+.sidebar{
+    padding-right: 0%;
+}
+
+footer{
+    background-color: #fff;
+}

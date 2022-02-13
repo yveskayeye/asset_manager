@@ -41,6 +41,6 @@ def create_app(config_name):
     app.register_blueprint(add_bp, url_prefix="/add")
 
     from .inventory.views import inventory_bp
-    app.register_blueprint(inventory_bp, url_prefix="/add")
+    app.register_blueprint(inventory_bp, url_prefix="/inventory")
 
     return app

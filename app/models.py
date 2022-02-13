@@ -1,3 +1,4 @@
+from email.policy import default
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -36,8 +37,15 @@ class Asset(db.Model):
 
     __tablename__ = "assets"
 
-    id = db.Column(db.Integer, primary_key=True)
-    type = db.Column(db.String(80))
+    asset_tag = db.Column(db.String(80), primary_key=True)
+    name = db.Column(db.String(80), unique=True, nullable=False)
+    type = db.Column(db.String(80), unique=True, nullable=False)
+    item_discription = db.Column(db.String(80), unique=True, nullable=False)
+    condition = db.Column(db.String(80), unique=True, nullable=False)
+    serial = db.Column(db.String(80), unique=True, nullable=False)
+    date_manufactured = db.Column(db.String(80), unique=True, nullable=False)
+    cost = db.Column(db.String(80), unique=True, nullable=False)
+    purchase_date = db.Column(db.String(80), unique=True, nullable=False)
 
     def __repr__(self):
-        return '<User %r>' % self.type
+        return '<User %r>' % self.name
