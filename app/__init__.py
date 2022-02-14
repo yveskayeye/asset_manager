@@ -43,4 +43,10 @@ def create_app(config_name):
     from .inventory.views import inventory_bp
     app.register_blueprint(inventory_bp, url_prefix="/inventory")
 
+    from .alerts.views import alert_bp
+    app.register_blueprint(alert_bp, url_prefix="/alert")
+
+    from .tracking.views import tracking_bp
+    app.register_blueprint(tracking_bp, url_prefix="/tracking")
+
     return app
